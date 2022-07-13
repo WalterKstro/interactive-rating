@@ -1,0 +1,112 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightgrey: hsl(217, 12%, 63%);
+    --mediumgrey: hsl(216, 12%, 54%);
+    --darkblue: #1e252f;
+    --verydarkblue: hsl(216, 12%, 8%);
+    --bg-circles: #273039;
+
+    --size-circles: 2.7rem;
+}
+body,html{
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+}
+.wrapper{
+    background-color: var(--verydarkblue);
+}
+/* Custom styles */
+.card{
+    max-width: 21rem;
+    width: 100%;
+    min-height: 24rem;
+    height: 100%;
+    background-color: var(--darkblue);
+    border-radius: 1rem;
+}
+.icon,
+.btn__raiting{
+    width: var(--size-circles);
+    height: var(--size-circles);
+    background-color: var(--bg-circles);
+}
+.icon__img{
+    width: 35%;
+}
+.btn__raiting{
+    color: var(--mediumgrey);
+    font-weight: 700;
+    font-size: .9rem;
+    line-height: var(--size-circles);
+}
+.btn__raiting:hover{
+    background-color: var(--orange);
+    color: var(--white);
+}
+.active{
+    background-color: var(--lightgrey);
+    color: var(--white);
+}
+.main__title{
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.description{
+    color: var(--lightgrey);
+    font-size: 0.9rem;
+}
+.btn__submit{
+    background-color: var(--orange);
+    color:var(--white);
+    height: var(--size-circles);
+    line-height: var(--size-circles);
+    letter-spacing: .1rem;
+    font-size: .9rem;
+}
+.btn__submit:hover{
+    color: var(--orange);
+    background-color: var(--white);
+}
+.score{
+    color: var(--orange);
+    background-color: var(--bg-circles);
+    font-size: .9rem;
+}
+/* Breakpoint Desktop 1440px*/
+@media screen and (min-width: 1200px) {
+    .card{
+        max-width: 23rem;
+        border-radius: 1.5rem;
+    }
+}
+
+
+/* Styles of spiner CSS */
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(0deg, rgba(255, 61, 0, 0.2) 33%, #ff3d00 100%);
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #263238;
+}
+@keyframes rotation {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg)}
+}
